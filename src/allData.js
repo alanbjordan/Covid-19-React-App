@@ -22,18 +22,10 @@ class AllData extends Component {
     }
   }
 
-
-  casesData = async (cases) => {
-    const casesData = await cases;
-    return
-  }
-
-  // handleClick = async () => {
-  //   // event.preventDefault();
-  //   this.setState({
-  //     isLoaded: true,
-  //   });
-  // };
+  handleClick = async (event) => {
+    event.preventDefault();
+    console.log("Updated State: ", this.state.value)
+  };
   
   render() {
     const {isLoaded} = this.state;
@@ -42,8 +34,9 @@ class AllData extends Component {
     }else{
     const theElement = this.state.value;
     this.state.theData.forEach(element => {
-      if (element.state === theElement)
-      {this.casesData(element.cases)}
+      if (element.state === theElement){
+        console.log(element.cases)
+      }
     }
       ); 
     return (
@@ -58,7 +51,6 @@ class AllData extends Component {
             )}
           </select>
           <input type="submit" onClick={this.handleClick} />
-          {/* <button >Submit</button> */}
           {console.log("lower log US State: ",this.state.value)}
         </form>
           
