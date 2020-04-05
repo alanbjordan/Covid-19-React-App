@@ -1,7 +1,11 @@
 import React from 'react';
-// import StatesData from './components/StatesData';
-import AllData from './allData';
+import StateData from './components/StateData';
+import AllStates from './components/AllStates';
 import './App.css';
+import {
+  Route,
+  BrowserRouter as Router
+} from 'react-router-dom';
 
 const App = () => {
     
@@ -9,7 +13,11 @@ const App = () => {
     return (
       <div>
         <h1>US Covid19 Current Data</h1>
-        <AllData />
+        <Router>
+          <Route exact path='/' component={AllStates} />
+          <Route exact path='/states/:state?' component={StateData} />
+        </Router>
+
       </div>
     );
   }
