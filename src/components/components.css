@@ -1,0 +1,11 @@
+.homePageWrapper {
+    text-align: center;
+
+}
+
+.homePageStats {
+    margin: 0 auto;    
+    /* text-align: center; */
+    border: 2px solid brown;
+    width: 500px;
+}
