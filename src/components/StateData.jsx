@@ -34,21 +34,21 @@ class StateData extends Component {
         if (this.props.match.params.state === theState[i].state) {
           const matchedState = theState[i];
           return (
-          <div> 
-            <h3>{matchedState.state} </h3>
-            <div>
-              Total Cases: {matchedState.cases}
-            </div>   
-            <div>
-              Todays's Cases: {matchedState.todayCases}
-            </div> 
-            <div>
-              Deaths: {matchedState.deaths}
-            </div>        
-            <div>
-              Today's Deaths: {matchedState.todayDeaths}
+            <div> 
+              <h3>{matchedState.state} </h3>
+              <div>
+                Total Cases: {matchedState.cases}
+              </div>   
+              <div>
+                Todays's Cases: {matchedState.todayCases}
+              </div> 
+              <div>
+                Deaths: {matchedState.deaths}
+              </div>        
+              <div>
+                Today's Deaths: {matchedState.todayDeaths}
+              </div>
             </div>
-          </div>
           )
         }
       }
