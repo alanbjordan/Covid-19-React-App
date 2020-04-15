@@ -31,7 +31,7 @@ class StateData extends Component {
   render() {
     const theWorld = this.state.data;
     console.log(theWorld);
-    const date = new Date('2019-04-01T00:30:00.000Z'); // Date in JSON format in UTC
+    const date = new Date('2019-04-01T00:30:00.000Z'); 
     if (theWorld != null) { 
         return (
             <div className="homePageWrapper">

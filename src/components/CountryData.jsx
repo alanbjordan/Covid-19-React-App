@@ -46,7 +46,6 @@ class StateData extends Component {
                   Total Active Cases: {matchedCountry.active}<br></br>
                   Total Recoveries: {matchedCountry.recovered}
                 </div>
-
             </div>
           )
         }

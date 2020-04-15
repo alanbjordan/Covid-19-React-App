@@ -11,8 +11,7 @@ import {
 } from 'react-router-dom';
 
 const App = () => {
-    
-    // const dataUp = "covid19"
+
     return (
       <div>
         <div>
