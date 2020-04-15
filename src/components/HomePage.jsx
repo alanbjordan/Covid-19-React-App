@@ -31,22 +31,17 @@ class StateData extends Component {
   render() {
     const theWorld = this.state.data;
     console.log(theWorld);
+    const date = new Date('2019-04-01T00:30:00.000Z'); // Date in JSON format in UTC
     if (theWorld != null) { 
         return (
             <div className="homePageWrapper">
                 <div className="homePageStats">
-                    <h2>Worldwide Statistics</h2>
-                    <h3>Total Cases: </h3>{theWorld.cases}
-                    <h3>Today's Cases: </h3>{theWorld.todayCases}
-                    <h3>Total Deaths: </h3>{theWorld.deaths}
-                    <h3>Today's deaths: </h3>{theWorld.todayDeaths}
-                    <h3>Recoveries: </h3>{theWorld.recovered}
-                    <h3>Active Cases: </h3>{theWorld.active}
-                    <h3>Critical Cases: </h3>{theWorld.critical}
-                    <h3>Cases Per One Million: </h3>{theWorld.casesPerOneMillion}
-                    <h3>Deaths Per One Million: </h3>{theWorld.deathsPerOneMillion}
-                    <h3>Updated Cases: </h3>{theWorld.updated}
-                    <h3>Affected Countries: </h3>{theWorld.affectedCountries}
+                    <h2 className='title'>COVID-19 Worldwide DATA</h2>
+                    Last Updated: {new Date().toLocaleString()}
+                    <h3 className='dataHome'>Total Cases: </h3>{theWorld.cases}
+                    <h3 className='dataHome'>Total Deaths: </h3>{theWorld.deaths}
+                    <h3 className='dataHome'>Recoveries: </h3>{theWorld.recovered}
+                    <h3 className='dataHome'>Active Cases: </h3>{theWorld.active}
                 </div>
             </div>
         )
