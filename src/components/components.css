@@ -2,10 +2,45 @@
     text-align: center;
 
 }
+.allStatesWrapper {
+    text-align: center;
+}
+
+.allStates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allCountriesWrapper {
+    text-align: center;
+}
 
 .homePageStats {
     margin: 0 auto;    
     /* text-align: center; */
-    border: 2px solid brown;
+    /* border: 2px solid brown; */
     width: 500px;
+}
+
+.title {
+    background-color: rgb(207, 203, 203);
+    color: green;
+}
+
+.dataHome {
+    font-size: 52px;
+}
+
+table {
+    text-align: center;
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid green;
+}
+
+td {
+    border: 1px solid black;
 }
