@@ -29,15 +29,19 @@ class AllStates extends Component {
       };
 
     render() {
-        if (this.state.data.length > 0) {
+        if (this.state.data != null) {
         const statesData = this.state.data;
         console.log(statesData);
             return (
                 <div className='allStatesWrapper'>
-                    <h1>United States of America COVID-19 Data</h1>                    
+                    <div class="ui breadcrumb">
+                        <a href='/' class="section">Home</a>
+                        <i class="right chevron icon divider"></i>
+                        <div class="active section">States</div>
+                    </div>   
+                    <h1>United States of America COVID-19 Data</h1>                 
                     <div className='allStates'>
-
-                        <table>
+                        <table className='ui selectable celled table'>
                             <thead>
                                 <tr>
                                     <th>State</th>
@@ -67,7 +71,14 @@ class AllStates extends Component {
             </div>
         )
         } else {
-            return <div>Loading Data....</div>
+            return (<div class="ui segment">
+            <div class="ui active inverted dimmer">
+              <div class="ui large text loader">Loading</div>
+            </div>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>)
         }        
     }
 }

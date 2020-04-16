@@ -35,23 +35,41 @@ class StateData extends Component {
         if (this.props.match.params.country === theCountries[i].country) {
           const matchedCountry = theCountries[i];
           return (
-            <div> 
-                {matchedCountry.country} COVID-19 DATA
-                <div>
-                  <img src={matchedCountry.countryInfo.flag}/>                  
-                </div>
-                <div>
-                  Total Cases: {matchedCountry.cases}<br></br>
-                  Total Deaths: {matchedCountry.deaths}<br></br>
-                  Total Active Cases: {matchedCountry.active}<br></br>
-                  Total Recoveries: {matchedCountry.recovered}
-                </div>
+            <div className='allStatesWrapper'> 
+              <div class="ui breadcrumb">
+                <a href='/' class="section">Home</a>
+                <i class="right chevron icon divider"></i>
+                <a href='/country' class="section">Country</a>
+                <i class="right chevron icon divider"></i>
+                <div class="active section">{this.props.match.params.country}<br></br></div>
+              </div> 
+              <div>
+                {matchedCountry.country} COVID-19 DATA                
+              </div>
+              <div class="ui centered card">
+              <div class="image">
+              <img src={matchedCountry.countryInfo.flag}/>  
+              </div>
+              <div class="content">
+                Total Cases: {matchedCountry.cases}<br></br>
+                Total Deaths: {matchedCountry.deaths}<br></br>
+                Total Active Cases: {matchedCountry.active}<br></br>
+                Total Recoveries: {matchedCountry.recovered}
+              </div>
+            </div>
             </div>
           )
         }
       }
     }
-    return <div>Loading Data....</div>
+    return (<div class="ui segment">
+    <div class="ui active inverted dimmer">
+      <div class="ui large text loader">Loading</div>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>)
   }
 }
 

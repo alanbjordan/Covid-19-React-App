@@ -30,13 +30,18 @@ class AllCountries extends Component {
 
     render() {
         const country = this.state.data;
-        if (country.length > 0) {
+        if (country != null) {
           console.log(country);
           return (
             <div className='allCountriesWrapper'>
-              <h1>Global COVID-19 Data</h1> 
+                <div class="ui breadcrumb">
+                  <a href='/' class="section">Home</a>
+                  <i class="right chevron icon divider"></i>
+                  <div class="active section">Country</div>
+                </div>
+                <h1>Global COVID-19 Data</h1> 
               <div className='allStates'>
-                <table>
+                <table className='ui selectable celled table'>
                     <thead>
                         <tr>
                             <th>Country</th>
@@ -70,7 +75,15 @@ class AllCountries extends Component {
             </div>
           )
         }
-        return <div>Loading Data....</div>
+        return (
+      <div class="ui segment">
+        <div class="ui active inverted dimmer">
+          <div class="ui large text loader">Loading</div>
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>)
     }
 }
 

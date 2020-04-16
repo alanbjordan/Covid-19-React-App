@@ -38,15 +38,29 @@ class StateData extends Component {
                 <div className="homePageStats">
                     <h2 className='title'>COVID-19 Worldwide DATA</h2>
                     Last Updated: {new Date().toLocaleString()}
-                    <h3 className='dataHome'>Total Cases: </h3>{theWorld.cases}
-                    <h3 className='dataHome'>Total Deaths: </h3>{theWorld.deaths}
-                    <h3 className='dataHome'>Recoveries: </h3>{theWorld.recovered}
-                    <h3 className='dataHome'>Active Cases: </h3>{theWorld.active}
+                    <hr />
+                    <div class="ui statistic">
+                      <div className='label'>Total Cases: </div>
+                      <div className='value'>{theWorld.cases}</div>
+                      <div className='label'>Total Deaths: </div>
+                      <div className='value'>{theWorld.deaths}</div>
+                      <div className='label'>Recoveries: </div>
+                      <div className='value'>{theWorld.recovered}</div>
+                      <div className='label'>Active Cases: </div>
+                      <div className='value'>{theWorld.active}</div>
+                    </div>
                 </div>
             </div>
         )
     }
-    return <div>Loading Data....</div>
+    return (<div class="ui segment">
+    <div class="ui active inverted dimmer">
+      <div class="ui large text loader">Loading</div>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>)
   }
 }
 
